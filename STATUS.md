@@ -25,7 +25,7 @@ GitHub URL: NONE created by this run. GitHub remote write: NOT PERFORMED.
 Vercel account/project/audience: UNKNOWN. Production publication approval: NOT RECEIVED.
 Deployment URL: NONE. Deployed commit: NONE. Remote verification: NOT PERFORMED.
 Competition submission: NOT ATTEMPTED.
-Local commit: pending final local commit; exact ID will be recorded below and in the private handoff manifest.
+Implementation commit: acc73321f9e574dff3e94018f99253abcbb934a7 (local only). Final handoff commit is in HANDOFF_MANIFEST.json. Deployed commit: NONE.
 
 ## Tools and constraints
 Web retrieval, filesystem, Node 24, Python, installed TypeScript and local Chromium available. Terminal DNS/network/package downloads, Gemini credentials, authenticated GitHub/Vercel access and shared interactive browser session unavailable. No secrets printed. No private/client material used.
