@@ -1,0 +1,199 @@
+{
+  "at": "2026-09-06T03:43:39.190Z",
+  "provenance": "Assistant-authored synthetic fixtures; engineering expectations, not expert legal ground truth.",
+  "sampleSize": 9,
+  "structuralPolicyAnomalies": 7,
+  "mvpAnomaliesFlagged": 7,
+  "citationExistsBaselineAnomaliesFlagged": 2,
+  "exactExpectedSignalSets": 9,
+  "automaticClaimsVerified": 0,
+  "semanticCounterexamples": 1,
+  "semanticCounterexamplesNotAutomaticallyDetected": 1,
+  "semanticCounterexamplesStillHumanReviewRequired": 1,
+  "revisionMutations": 5,
+  "staleReviewsInvalidated": 5,
+  "citationExistsBaselineStaleApprovalsRetained": 5,
+  "latency": {
+    "runs": 40,
+    "claimsPerRun": 6,
+    "medianMs": 0.45049799999999607,
+    "p95Ms": 1.0951709999999935,
+    "scope": "Node local engine, no browser render/network/model latency; not a legal-workflow speed study"
+  },
+  "externalAPICalls": 0,
+  "externalAPICostUSD": 0,
+  "rows": [
+    {
+      "id": "C1",
+      "expected": [
+        "AMOUNT_NOT_IN_PASSAGE",
+        "QUOTE_MISMATCH"
+      ],
+      "actual": [
+        "AMOUNT_NOT_IN_PASSAGE",
+        "QUOTE_MISMATCH"
+      ],
+      "exactExpectedSignals": true,
+      "initialState": "blocked",
+      "mechanicalIssueTarget": true,
+      "baselineFlagsIssue": false,
+      "mvpFlagsIssue": true,
+      "semanticWarning": false,
+      "latencyMs": 8.149840999999995
+    },
+    {
+      "id": "C2",
+      "expected": [
+        "DATE_NOT_IN_PASSAGE"
+      ],
+      "actual": [
+        "DATE_NOT_IN_PASSAGE"
+      ],
+      "exactExpectedSignals": true,
+      "initialState": "blocked",
+      "mechanicalIssueTarget": true,
+      "baselineFlagsIssue": false,
+      "mvpFlagsIssue": true,
+      "semanticWarning": false,
+      "latencyMs": 0.4744799999999998
+    },
+    {
+      "id": "C3",
+      "expected": [],
+      "actual": [],
+      "exactExpectedSignals": true,
+      "initialState": "needs-review",
+      "mechanicalIssueTarget": false,
+      "baselineFlagsIssue": false,
+      "mvpFlagsIssue": false,
+      "semanticWarning": false,
+      "latencyMs": 0.40580599999999833
+    },
+    {
+      "id": "C4",
+      "expected": [
+        "MISSING_SOURCE"
+      ],
+      "actual": [
+        "MISSING_SOURCE"
+      ],
+      "exactExpectedSignals": true,
+      "initialState": "blocked",
+      "mechanicalIssueTarget": true,
+      "baselineFlagsIssue": true,
+      "mvpFlagsIssue": true,
+      "semanticWarning": false,
+      "latencyMs": 0.12455400000000338
+    },
+    {
+      "id": "C5",
+      "expected": [
+        "LEGAL_ABSTENTION"
+      ],
+      "actual": [
+        "LEGAL_ABSTENTION"
+      ],
+      "exactExpectedSignals": true,
+      "initialState": "blocked",
+      "mechanicalIssueTarget": true,
+      "baselineFlagsIssue": false,
+      "mvpFlagsIssue": true,
+      "semanticWarning": false,
+      "latencyMs": 0.2261919999999975
+    },
+    {
+      "id": "C6",
+      "expected": [],
+      "actual": [],
+      "exactExpectedSignals": true,
+      "initialState": "needs-review",
+      "mechanicalIssueTarget": false,
+      "baselineFlagsIssue": false,
+      "mvpFlagsIssue": false,
+      "semanticWarning": true,
+      "latencyMs": 0.2099230000000034
+    },
+    {
+      "id": "E7-no-citation",
+      "expected": [
+        "MISSING_CITATION"
+      ],
+      "actual": [
+        "MISSING_CITATION"
+      ],
+      "exactExpectedSignals": true,
+      "initialState": "blocked",
+      "mechanicalIssueTarget": true,
+      "baselineFlagsIssue": true,
+      "mvpFlagsIssue": true,
+      "semanticWarning": false,
+      "latencyMs": 0.11220900000000711
+    },
+    {
+      "id": "E8-missing-lines",
+      "expected": [
+        "MISSING_LINES"
+      ],
+      "actual": [
+        "MISSING_LINES"
+      ],
+      "exactExpectedSignals": true,
+      "initialState": "blocked",
+      "mechanicalIssueTarget": true,
+      "baselineFlagsIssue": false,
+      "mvpFlagsIssue": true,
+      "semanticWarning": false,
+      "latencyMs": 1.0174149999999997
+    },
+    {
+      "id": "E9-inert-instructions",
+      "expected": [
+        "UNTRUSTED_INSTRUCTIONS"
+      ],
+      "actual": [
+        "UNTRUSTED_INSTRUCTIONS"
+      ],
+      "exactExpectedSignals": true,
+      "initialState": "blocked",
+      "mechanicalIssueTarget": true,
+      "baselineFlagsIssue": false,
+      "mvpFlagsIssue": true,
+      "semanticWarning": false,
+      "latencyMs": 0.11258499999999572
+    }
+  ],
+  "stale": [
+    {
+      "id": "source-content",
+      "mvpState": "stale",
+      "baselineKeepsApproval": true
+    },
+    {
+      "id": "source-title",
+      "mvpState": "stale",
+      "baselineKeepsApproval": true
+    },
+    {
+      "id": "claim-text",
+      "mvpState": "stale",
+      "baselineKeepsApproval": true
+    },
+    {
+      "id": "citation-range",
+      "mvpState": "stale",
+      "baselineKeepsApproval": true
+    },
+    {
+      "id": "matter-id",
+      "mvpState": "stale",
+      "baselineKeepsApproval": true
+    }
+  ],
+  "limitations": [
+    "No actual competitor or competent-human time trial.",
+    "Citation-exists baseline is intentionally simple, not a strong general-purpose LLM.",
+    "Live LLM baseline and Gemini failure-path tests blocked: no key, network or budget approval.",
+    "Manual source/claim selection overhead not measured.",
+    "Synthetic tests do not establish legal or semantic accuracy."
+  ]
+}

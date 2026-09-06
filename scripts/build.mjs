@@ -1,0 +1,17 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {stripTypeScriptTypes} from 'node:module';
+import {createHash} from 'node:crypto';
+const root=new URL('../',import.meta.url);
+const read=p=>readFile(new URL(p,root),'utf8');
+const core=stripTypeScriptTypes(await read('src/core.ts')).replace(/^export\s+/gm,'');
+const app=stripTypeScriptTypes(await read('src/app.ts')).replace(/^import\s+.*?;\s*$/gm,'');
+const js='(()=>{\n"use strict";\n'+core+'\n'+app+'\n})();';
+if (/<\/script/i.test(js)) throw new Error('Unsafe script closing tag in bundle.');
+const css=await read('src/style.css');
+const scriptHash=createHash('sha256').update(js).digest('base64');
+const csp=`default-src 'none'; script-src 'sha256-${scriptHash}'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; font-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'`;
+const html=(await read('src/shell.html')).replace('__CSP__',csp).replace('__CSS__',()=>css).replace('__JS__',()=>js);
+await mkdir(new URL('dist/',root),{recursive:true});await writeFile(new URL('dist/index.html',root),html);
+const meta={builtAt:new Date().toISOString(),sha256:createHash('sha256').update(html).digest('hex'),bytes:Buffer.byteLength(html),runtime:'Node '+process.versions.node,mode:'static-local-deterministic',networkCalls:0};
+await writeFile(new URL('dist/build-info.json',root),JSON.stringify(meta,null,2));
+console.log(JSON.stringify(meta));

@@ -1,0 +1,8 @@
+{
+  "builtAt": "2026-09-06T03:43:38.956Z",
+  "sha256": "f25834dafafb5b7329e17a18a6837d823cda7d7413e32d48f3a8b7dbf1de5f83",
+  "bytes": 40685,
+  "runtime": "Node 24.14.1",
+  "mode": "static-local-deterministic",
+  "networkCalls": 0
+}

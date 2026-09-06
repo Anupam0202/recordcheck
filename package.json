@@ -1,0 +1,19 @@
+{
+  "name": "recordcheck",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-only evidence-review prototype; no legal verification",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "start": "node scripts/serve.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "typecheck": "node scripts/typecheck.mjs",
+    "security": "node scripts/security-check.mjs",
+    "evaluate": "node scripts/evaluate.mjs",
+    "spikes": "node scripts/finalist-spikes.mjs"
+  }
+}

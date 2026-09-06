@@ -1,0 +1,5 @@
+import http from 'node:http';import fs from 'node:fs/promises';
+const port=Number(process.env.PORT||4173);const root=new URL('../dist/',import.meta.url);
+const allowed=new Map([['/','index.html'],['/index.html','index.html'],['/build-info.json','build-info.json']]);
+const server=http.createServer(async(req,res)=>{try{const path=new URL(req.url,'http://localhost').pathname;if(path==='/favicon.ico'){res.writeHead(204);res.end();return;}const name=allowed.get(path);if(!name){res.writeHead(404,{'Content-Type':'text/plain'});res.end('Not found');return;}const body=await fs.readFile(new URL(name,root));res.writeHead(200,{'Content-Type':name.endsWith('.json')?'application/json':'text/html; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer','X-Frame-Options':'DENY'});res.end(body);}catch{res.writeHead(500,{'Content-Type':'text/plain'});res.end('Local build unavailable. Run npm run build.');}});
+server.listen(port,'127.0.0.1',()=>console.log(`Local preview: http://127.0.0.1:${port}`));

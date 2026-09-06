@@ -1,0 +1,55 @@
+
+> recordcheck@0.1.0 test
+> node --test tests/*.test.mjs
+
+✔ regression: sentence-ending punctuation must not truncate thousands (1.548741ms)
+✔ regression: sentence-ending punctuation must not truncate decimals (0.211074ms)
+✔ regression: different amounts with same thousands prefix remain distinct (0.171945ms)
+✔ regression: malformed decimal does not become a shorter amount (0.122514ms)
+✔ regression: ungrouped sentence amount keeps all digits (0.136777ms)
+✔ regression: actual issue message shows complete canonical amounts (11.124363ms)
+✔ schema roundtrip preserves synthetic matter (3.135713ms)
+✔ ordinary claim remains unreviewed after mechanical pass (9.274033ms)
+✔ amount and quote mismatch detected (2.878414ms)
+✔ date mismatch detected (0.6866ms)
+✔ missing source detected (0.96179ms)
+✔ legal propositions always abstain (0.902185ms)
+✔ semantic contradiction NOT called verified despite exact quote (1.288881ms)
+✔ blank source reference detected (0.476132ms)
+✔ missing cited line detected (1.141894ms)
+✔ quotation normalization tolerates whitespace only (0.981208ms)
+✔ quote matching remains case-sensitive (0.613819ms)
+✔ injection-like evidence is not executed and flagged (0.815291ms)
+✔ malformed JSON fails safe (0.365387ms)
+✔ oversized JSON rejected before parse (0.400532ms)
+✔ duplicate source IDs rejected (0.141031ms)
+✔ duplicate claim IDs rejected (0.100744ms)
+✔ unknown top-level field rejected, preventing approval import (0.093835ms)
+✔ invalid line ranges rejected (0.105083ms)
+✔ oversized document rejected (0.111735ms)
+✔ review requires acknowledgement (3.276127ms)
+✔ review requires meaningful reason (1.880186ms)
+✔ blocked claim cannot be marked reviewed (0.218498ms)
+✔ explicit exclusion allowed for unresolved evidence (1.120211ms)
+✔ source mutation invalidates an approval (1.358136ms)
+✔ uncited line change conservatively invalidates cited document approval (0.606531ms)
+✔ claim change invalidates approval (0.612723ms)
+✔ matter identity change invalidates approval (0.836246ms)
+✔ unrelated document leaves current claim binding unchanged (0.600832ms)
+✔ empty matter is not a completed handoff (0.270018ms)
+✔ cancellation prevents completed results (0.349562ms)
+✔ report includes unresolved and stale warnings (1.524672ms)
+✔ SHA-256 matches known independent test vector (0.309881ms)
+✔ held-out: CRLF preserves line locations (0.414103ms)
+✔ held-out: same numeral in a different currency is not SGD support (0.408264ms)
+✔ held-out: source title change also revokes approval (1.525135ms)
+✔ valid constructor-like claim ID cannot inherit a phantom review (0.452407ms)
+✔ report ignores inherited review properties (0.587387ms)
+ℹ tests 43
+ℹ suites 0
+ℹ pass 43
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 247.286349

@@ -1,0 +1,20 @@
+[
+  {
+    "candidate": "C01",
+    "test": "Source edit revokes previous review",
+    "result": "PASS",
+    "scope": "Actual SHA-256 engine; demand and entry burden untested."
+  },
+  {
+    "candidate": "C02",
+    "test": "Reordering pages changes computed index targets",
+    "result": "PASS—METADATA ONLY",
+    "scope": "No PDF ingestion/export implemented; core browser PDF dependency remains blocked."
+  },
+  {
+    "candidate": "C03",
+    "test": "Received-but-incomplete cannot close; explicit complete+reviewed can",
+    "result": "PASS—STATE PREDICATE ONLY",
+    "scope": "No real legal checklist, collaboration, persistence or adoption test."
+  }
+]

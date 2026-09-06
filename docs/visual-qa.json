@@ -1,0 +1,17 @@
+{
+  "at": "2026-09-06T03:45:36.196386+00:00",
+  "screens": {
+    "desktop-review": "PASS \u2014 full amounts visible, exact source lines and review controls fit their panels.",
+    "reviewed": "PASS \u2014 self-attested badge and receipt are visible without displacing evidence.",
+    "stale": "PASS \u2014 prior receipt clearly marked stale; updated full-source context remains visible.",
+    "error": "PASS \u2014 invalid JSON alert is visible; existing matter remains intact.",
+    "activity": "PASS \u2014 session activity is legible and labeled non-tamperproof.",
+    "limits": "PASS \u2014 semantic counterexample and scope exclusions clearly presented.",
+    "empty": "PASS \u2014 disabled packet export and incomplete status, not false completion.",
+    "mobile-review": "PASS \u2014 390px layout, stacked controls, no horizontal overflow.",
+    "mobile-data": "PASS \u2014 390px file/JSON input and source controls remain in bounds.",
+    "dark-review": "PASS \u2014 clear semantic colors, readable placeholder contrast after explicit fix."
+  },
+  "method": "Each image opened and inspected individually; not inferred from screenshot generation.",
+  "contrast": "13 selected foreground/background pairs calculated; all satisfy their declared thresholds. Not a full WCAG audit."
+}

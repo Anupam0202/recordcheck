@@ -1,0 +1,30 @@
+{
+  "at": "2026-09-06T03:44:09.513Z",
+  "checks": [
+    "Desktop app starts and completes core checks",
+    "Real amount/quote flags render with source lines",
+    "Human review records only after reason and acknowledgement",
+    "Changing full source invalidates old review in actual UI",
+    "Download creates a real Markdown review packet",
+    "Semantic counterexample still requires human review",
+    "Invalid JSON produces a visible safe error without replacing matter",
+    "Imported HTML remains inert text (no element or request)",
+    "Replacing a matter clears earlier matter activity and reviews",
+    "Empty matter does not become a completed handoff",
+    "390px mobile layout has no horizontal overflow",
+    "390px import/source-edit layout has no horizontal overflow",
+    "Dark theme renders",
+    "No localStorage/sessionStorage persistence",
+    "Keyboard focus reaches an interactive control",
+    "Zero external requests and zero browser errors in tested flows",
+    "Direct index.html deep link loads",
+    "Local build metadata is accessible",
+    "Self-contained HTML works directly from a local file"
+  ],
+  "passed": 19,
+  "browserErrors": [],
+  "externalRequests": [],
+  "screenshots": "qa/*.png",
+  "scope": "Local Chromium E2E only; no remote deployment, no Gemini path",
+  "visualInspection": "PASS for 10 individually inspected layout/state captures, plus final dark placeholder contrast recheck. Later matter-isolation changes do not alter layout. Not a full accessibility certification."
+}

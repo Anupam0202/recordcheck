@@ -1,0 +1,4 @@
+import {readdir,readFile} from 'node:fs/promises';import path from 'node:path';
+let files=0;const problems=[];
+async function walk(dir){for(const e of await readdir(dir,{withFileTypes:true})){if(['.git','node_modules'].includes(e.name))continue;const p=path.join(dir,e.name);if(e.isDirectory()){await walk(p);continue;}files++;if(/^\.env($|\.)/.test(e.name)&&e.name!=='.env.example')problems.push(p+': real environment file');if(/\.(ts|js|mjs|json|md|html|css|example|yml)$/.test(p)){const s=await readFile(p,'utf8');for(const re of [/AIza[\w-]{30,}/g,/gh[pousr]_[A-Za-z0-9]{30,}/g,/-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/g])if(re.test(s))problems.push(p+': potential credential');}}}
+await walk('.');console.log(JSON.stringify({filesScanned:files,potentialSecrets:problems.length,problems}));process.exit(problems.length?1:0);

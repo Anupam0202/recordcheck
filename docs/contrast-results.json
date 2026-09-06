@@ -1,0 +1,106 @@
+[
+  {
+    "pair": "light primary",
+    "foreground": "#232a34",
+    "background": "#ffffff",
+    "ratio": 14.46,
+    "threshold": 4.5,
+    "pass": true
+  },
+  {
+    "pair": "light secondary and placeholder",
+    "foreground": "#536071",
+    "background": "#ffffff",
+    "ratio": 6.4,
+    "threshold": 4.5,
+    "pass": true
+  },
+  {
+    "pair": "light primary button",
+    "foreground": "#ffffff",
+    "background": "#165ba8",
+    "ratio": 6.78,
+    "threshold": 4.5,
+    "pass": true
+  },
+  {
+    "pair": "light risk badge",
+    "foreground": "#a12c26",
+    "background": "#fff0ee",
+    "ratio": 6.53,
+    "threshold": 4.5,
+    "pass": true
+  },
+  {
+    "pair": "light warning badge",
+    "foreground": "#8b480b",
+    "background": "#fff4e7",
+    "ratio": 6.39,
+    "threshold": 4.5,
+    "pass": true
+  },
+  {
+    "pair": "light reviewed badge",
+    "foreground": "#276a43",
+    "background": "#edf7ee",
+    "ratio": 5.93,
+    "threshold": 4.5,
+    "pass": true
+  },
+  {
+    "pair": "dark primary",
+    "foreground": "#f2f5fa",
+    "background": "#191d23",
+    "ratio": 15.48,
+    "threshold": 4.5,
+    "pass": true
+  },
+  {
+    "pair": "dark secondary and placeholder",
+    "foreground": "#bac5d2",
+    "background": "#191d23",
+    "ratio": 9.67,
+    "threshold": 4.5,
+    "pass": true
+  },
+  {
+    "pair": "dark primary button",
+    "foreground": "#132336",
+    "background": "#80baff",
+    "ratio": 7.86,
+    "threshold": 4.5,
+    "pass": true
+  },
+  {
+    "pair": "dark risk badge",
+    "foreground": "#ffb3a9",
+    "background": "#3d2526",
+    "ratio": 8.23,
+    "threshold": 4.5,
+    "pass": true
+  },
+  {
+    "pair": "dark warning badge",
+    "foreground": "#ffc48a",
+    "background": "#35291e",
+    "ratio": 9.09,
+    "threshold": 4.5,
+    "pass": true
+  },
+  {
+    "pair": "light input border",
+    "foreground": "#8794a5",
+    "background": "#ffffff",
+    "ratio": 3.08,
+    "threshold": 3,
+    "pass": true
+  },
+  {
+    "pair": "dark input border",
+    "foreground": "#8393a6",
+    "background": "#191d23",
+    "ratio": 5.39,
+    "threshold": 3,
+    "pass": true
+  }
+]

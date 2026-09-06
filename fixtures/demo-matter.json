@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "id": "demo-sg-01",
+  "title": "Meridian supply dispute",
+  "jurisdiction": "Singapore — synthetic example",
+  "synthetic": true,
+  "documents": [
+    {
+      "id": "E1",
+      "title": "Purchase order — synthetic",
+      "text": "SYNTHETIC DEMO — not a real transaction.\nPurchase order: Meridian Studio / Harbor Supplies.\nThe agreed price is SGD 8,000.\nDelivery is scheduled for 2026-08-15.\nPayment is due after delivery."
+    },
+    {
+      "id": "E2",
+      "title": "Delivery email — synthetic",
+      "text": "SYNTHETIC DEMO — not a real email.\nFrom: Harbor Supplies (fictional).\nWe delivered the goods on 2026-08-18.\nThe customer has not confirmed acceptance."
+    },
+    {
+      "id": "E3",
+      "title": "Account note — synthetic",
+      "text": "SYNTHETIC DEMO — not an authentic record.\nMeridian paid SGD 8,000 on 2026-08-20.\nThis note records a payment, not an admission of liability."
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "text": "The agreed price was SGD 18,000.",
+      "kind": "fact",
+      "sourceId": "E1",
+      "lineStart": 3,
+      "lineEnd": 3,
+      "quote": "The agreed price is SGD 18,000."
+    },
+    {
+      "id": "C2",
+      "text": "The goods were delivered on 2026-08-15.",
+      "kind": "fact",
+      "sourceId": "E2",
+      "lineStart": 3,
+      "lineEnd": 3,
+      "quote": ""
+    },
+    {
+      "id": "C3",
+      "text": "Meridian paid SGD 8,000 on 2026-08-20.",
+      "kind": "fact",
+      "sourceId": "E3",
+      "lineStart": 2,
+      "lineEnd": 2,
+      "quote": "Meridian paid SGD 8,000 on 2026-08-20."
+    },
+    {
+      "id": "C4",
+      "text": "Harbor admitted liability for the delay.",
+      "kind": "fact",
+      "sourceId": "E9",
+      "lineStart": 1,
+      "lineEnd": 1,
+      "quote": ""
+    },
+    {
+      "id": "C5",
+      "text": "These facts legally establish liability.",
+      "kind": "legal",
+      "sourceId": "E1",
+      "lineStart": 3,
+      "lineEnd": 5,
+      "quote": ""
+    },
+    {
+      "id": "C6",
+      "text": "The customer accepted the goods.",
+      "kind": "fact",
+      "sourceId": "E2",
+      "lineStart": 4,
+      "lineEnd": 4,
+      "quote": "The customer has not confirmed acceptance."
+    }
+  ]
+}
